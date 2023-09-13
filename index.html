@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,800;9..40,900&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800&family=Raleway:ital,wght@0,500;0,700;1,500&family=Rokkitt:ital,wght@0,400;0,500;0,700;1,300&family=Silkscreen&family=VT323&family=Zilla+Slab+Highlight&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<style>
+    @media only screen and (max-width: 768px) {
+        .none {
+            display: none;
+        }
+    }
+
+    body {
+        font-family: 'DM Sans', sans-serif;
+    }
+</style>
+
+<body class="bg-black">
+    <!-- Desktop Navbar -->
+    <nav class="bg-black none border-b-2 sticky top-0  border-dashed border-white p-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="https://nyxweb.xyz" class="text-white text-2xl decoration-solid font-bold">NyxWeb</a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="text-white hover:text-gray-300">Home</a>
+             
+                <a href="mailto:fuzelxr@gmail.com" class="text-white hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <nav class="md:hidden bg-black border-b-2  border-dotted border-white p-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="https://nyxweb.xyz" class="text-white text-2xl font-bold">NyxWeb</a>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="menu-toggle" class="text-white hover:text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Responsive Menu (Mobile) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-950 border-b-1 border-dotted border-neutral-700">
+        <a href="#home" class="block py-2 px-4 text-white hover:bg-neutral-700">Home</a>
+        
+        <a href="mailto:fuzelxr@gmail.com" class="block py-2 px-4 text-white hover:bg-neutral-700">Contact</a>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto mt-5 p-4">
+        <div class="mt-8 flex justify-evenly items-center flex-wrap h-screen " id="home">
+
+            <div class="m-3 max-w-md">
+                <div class="mb-3">
+                    <!-- <h1 class="font-semibold text-white text-5xl text-left ">
+                        Unlock Success with Our Transformative Funnel Website Solutions Today!
+                    </h1> -->
+                    <h1 class="animate-text bg-gradient-to-r from-white via-gray-500 to-white bg-clip-text text-transparent text-5xl font-black">Unlock Success with Our Transformative Funnel Website Solutions Today!</h1>
+                </div>
+                <div class="mt-7">
+                    <a class="bg-black text-white hover:text-neutral-500 p-4 mr-2  font-semibold" href="#">Know more</a>
+                    <a class=" hover:bg-neutral-400 text-black  p-4 font-semibold  bg-white"
+                        href="mailto:fuzelxr@gmail.com">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="m-3">
+                <img class="h-auto max-w-xs hidden md:block" src="/nyxweb/src/quantum.png" alt="">
+            </div>
+        </div>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>
